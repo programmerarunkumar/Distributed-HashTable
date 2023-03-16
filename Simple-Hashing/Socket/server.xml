@@ -1,0 +1,5 @@
+<?xml version="1.0"  ?>
+<servers>
+    <server ip="localHost" port="1111" />
+    <!-- <server ip="localHost" port="2222" /> -->
+</servers>

@@ -26,6 +26,8 @@ public class ClientHandler {
         System.out.println("Hash : " + hash);
         if(nodeMap.containsKey(hash)){
             ServerNode serverNode = (ServerNode) nodeMap.get(hash);
+
+            System.out.println("GET. IP : " + serverNode.getIp() + " PORT : " + serverNode.getPort());
             Socket socket = new Socket(serverNode.getIp(), serverNode.getPort());
 
             JSONObject jsonObject = new JSONObject();
@@ -69,6 +71,8 @@ public class ClientHandler {
         int hash = key % len;
         if(nodeMap.containsKey(hash)){
             ServerNode serverNode = (ServerNode) nodeMap.get(hash);
+
+            System.out.println("PUT. IP : " + serverNode.getIp() + " PORT : " + serverNode.getPort());
             Socket socket = new Socket(serverNode.getIp(), serverNode.getPort());
 
             JSONObject jsonObject = new JSONObject();
